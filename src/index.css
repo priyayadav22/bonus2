@@ -1,13 +1,147 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center_div{
+  width: 50%;
+  height: 60vh;
+  box-sizing: border-box;
+  background-color:  rgb(255, 121, 72);
+  font-weight: 500;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  letter-spacing: 0.02873em;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.center_div::-webkit-scrollbar {
+  display: none;
+}
+
+.main_div{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+}
+.image 
+{
+  width: 50%;
+  height: 100vh;
+  background: red;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+input{
+  text-align: center;
+  color: black !important;
+  height: 30px;
+  border: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 200px;
+  background: transparent;
+  border-bottom: 2px solid black;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+}
+
+input::placeholder {
+  color: #000;
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+h1{
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  background: transparent;
+  margin-bottom: 30px;
+  min-width: 64px;
+  font-weight: 500;
+  letter-spacing: 0.02345em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  h1{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .image{
+    display: none;
+  }
+
+  .center_div {
+    width:100%;
+  }
+}
+.newBtn{
+  height: 50px;
+  width: 50px;
+  font-size: 20px !important;
+  border-radius: 50%;
+  background-color: rgb(0, 65, 161) !important;
+  color: white !important;
+  box-shadow: 5px 5px 15px -5px black;
+}
+
+.newBtn:hover{
+  transition: 1s all ease;
+  background-color: rgb(45, 138, 71) !important;
+}
+
+.todo_style{
+  font-size: 20px ;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  padding: 2px;
+}
+
+
+li{
+  list-style: none;
+}
+
+.span
+{
+  cursor: pointer;
+  transition: 1s all ease;
+}
+
+.span:hover {
+  color: rgb(247, 236, 236);
 }
